@@ -5,11 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -55,10 +50,10 @@ export UPDATE_ZSH_DAYS=10
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -75,13 +70,15 @@ export UPDATE_ZSH_DAYS=10
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
+# COLORISE CAT FILE 
+ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_STYLE="colorful"
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages colorize extract node npm nvm pip virtualenv emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,5 +135,17 @@ alias shutdown='sudo shutdown'
 # alias for advanced copy and move
 alias cp='advcp -g'
 alias mv='advmv -g'
+
+# alias for update package
+alias update='sudo pacman -Syu'
+# alias to install pacman packages 
+alias install='sudo pacman -S'
+# alias search package
+alias search='sudo pacman -Ss'
+# alias to uninstall packages
+alias uninstall='sudo pacman -Rns'
+#alias to kill vlc 
+alias kill-vlc='killall -9 vlc'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /usr/share/nvm/init-nvm.sh
