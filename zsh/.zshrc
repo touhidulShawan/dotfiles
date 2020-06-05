@@ -133,9 +133,9 @@ alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
 
 # alias for advanced copy and move
-alias cp='advcp -g'
-alias mv='advmv -g'
-
+#alias cp='advcp -g'
+#alias mv='advmv -g'
+alias cp='rsync --info=progress2 '
 # alias for update package
 alias update='sudo pacman -Syu'
 # alias to install pacman packages 
@@ -144,8 +144,11 @@ alias install='sudo pacman -S'
 alias search='sudo pacman -Ss'
 # alias to uninstall packages
 alias uninstall='sudo pacman -Rns'
+#alias to remove orphand child
+alias useless='sudo pacman -Rns $(pacman -Qtdq)'
 #alias to kill vlc 
 alias kill-vlc='killall -9 vlc'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh
