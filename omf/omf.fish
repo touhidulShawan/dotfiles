@@ -42,7 +42,8 @@ alias search='sudo pacman -Ss'
 alias uninstall='sudo pacman -Rns'
 #alias to kill vlc 
 alias kill-vlc='killall -9 vlc'
-
+# update mirrorlist using reflector 
+alias genmirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 
