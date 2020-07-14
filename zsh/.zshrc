@@ -148,6 +148,8 @@ alias uninstall='sudo pacman -Rns'
 alias useless='sudo pacman -Rns $(pacman -Qtdq)'
 #alias to kill vlc 
 alias kill-vlc='killall -9 vlc'
+# update mirrorlist using reflector 
+alias genmirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #source /usr/share/nvm/init-nvm.sh
