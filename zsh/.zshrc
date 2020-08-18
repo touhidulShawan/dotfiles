@@ -69,7 +69,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-# COLORISE CAT FILE 
+# COLORISE CAT FILE
 ZSH_COLORIZE_TOOL=pygmentize
 ZSH_COLORIZE_STYLE="colorful"
 # Which plugins would you like to load?
@@ -107,14 +107,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias for my ls command
-alias ls='lsd -hA --group-dirs first'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+# alias ls='lsd -hA --group-dirs first'
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'
 
-# alias for my create-rect-app  
+# alias for my exa command replace for ls
+alias ls='exa -D --icons'
+alias l='exa --icons -a --group-directories-first'
+alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
+alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
+alias lt='exa --icons -T'
+
+# alias for my create-rect-app
 
 alias react='npx create-react-app'
 alias react-app='create-react-app'
@@ -123,11 +129,11 @@ alias react-app='create-react-app'
 
 alias sc='npm install --save styled-components'
 
-# alias to install style and stylint configuration standard 
+# alias to install style and stylint configuration standard
 
 alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
 
-# alias for rm 
+# alias for rm
 
 alias remove='sudo rm -r'
 
@@ -147,7 +153,7 @@ alias c='clear'
 alias cp='rsync --info=progress2 '
 # alias for update package
 alias update='sudo pacman -Syu'
-# alias to install pacman packages 
+# alias to install pacman packages
 alias install='sudo pacman -S'
 # alias search package
 alias search='sudo pacman -Ss'
@@ -155,13 +161,15 @@ alias search='sudo pacman -Ss'
 alias uninstall='sudo pacman -Rns'
 #alias to remove orphand child
 alias useless='sudo pacman -Rns $(pacman -Qtdq)'
-#alias to kill vlc 
+#alias to kill vlc
 alias kill-vlc='killall -9 vlc'
-# update mirrorlist using reflector 
+# update mirrorlist using reflector
 alias genmirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh
-# startship command prompt 
+# startship command prompt
 eval "$(starship init zsh)"
+
+source /home/shawan/.config/broot/launcher/bash/br
