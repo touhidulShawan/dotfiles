@@ -11,6 +11,12 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 
+# alias for exit
+alias e='exit'
+
+#alias for clear
+alias c='clear'
+
 # alias for my create-rect-app  
 
 alias react='npx create-react-app'
@@ -19,6 +25,10 @@ alias react-app='create-react-app'
 # alias to install package through npm in react app
 
 alias sc='npm install --save styled-components'
+
+# alias to  install package of stylelint and stylelint-config-standard 
+
+alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
 
 # alias for rm 
 
