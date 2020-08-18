@@ -4,7 +4,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -16,8 +15,8 @@ export ZSH="/home/shawan/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="dracula"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -71,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 # COLORISE CAT FILE 
-ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_TOOL=pygmentize
 ZSH_COLORIZE_STYLE="colorful"
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -124,6 +123,10 @@ alias react-app='create-react-app'
 
 alias sc='npm install --save styled-components'
 
+# alias to install style and stylint configuration standard 
+
+alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
+
 # alias for rm 
 
 alias remove='sudo rm -r'
@@ -131,6 +134,12 @@ alias remove='sudo rm -r'
 # alias for reboot and shutdown
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
+
+# alias for exit
+alias e='exit'
+
+# alias for clear
+alias c='clear'
 
 # alias for advanced copy and move
 #alias cp='advcp -g'
@@ -154,3 +163,5 @@ alias genmirror='sudo reflector --latest 10 --protocol https --sort rate --save 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh
+# startship command prompt 
+eval "$(starship init zsh)"
