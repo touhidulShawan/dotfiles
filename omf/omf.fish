@@ -4,12 +4,23 @@ set -q XDG_DATA_HOME
   or set -gx OMF_PATH "$HOME/.local/share/omf"
 
 
-# alias for my ls command
-alias ls='lsd -hA --group-dirs first'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
+#export LS_COLORS="di=35"
+#export EXA_COLORS="*.zip=38;5;125:*.md=38;5;121:*.log=38;5;248:*.json=32"
+
+# alias for my lsd command replace for ls
+
+# alias ls='lsd -hA --group-dirs first'
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'
+
+# alias for my exa command replace for ls
+alias ls='exa -D --icons'
+alias l='exa --icons -a --group-directories-first'
+alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
+alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
+alias lt='exa --icons -T'
 
 # alias for exit
 alias e='exit'
