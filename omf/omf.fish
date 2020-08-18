@@ -5,7 +5,7 @@ set -q XDG_DATA_HOME
 
 
 # alias for my ls command
-alias ls='lsd'
+alias ls='lsd -hA --group-dirs first'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
