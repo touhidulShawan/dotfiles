@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # alias for my ls command
-alias ls='lsd'
+alias ls='lsd -hA --group-dirs first'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
