@@ -60,9 +60,6 @@ alias c='clear'
 alias react='npx create-react-app'
 alias react-app='create-react-app'
 
-# alias to install package through npm in react app
-
-alias sc='npm install --save styled-components'
 
 # alias to  install package of stylelint and stylelint-config-standard
 
