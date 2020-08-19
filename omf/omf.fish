@@ -43,11 +43,11 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias status='git status'
+alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias addremote='git remote add origin'
-
+alias clone='git clone'
 
 # alias for exit
 alias e='exit'
@@ -91,7 +91,7 @@ alias uninstall='sudo pacman -Rns'
 alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
 alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+# alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 #alias to kill vlc
 alias kill-vlc='killall -9 vlc'
