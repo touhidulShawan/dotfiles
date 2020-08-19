@@ -15,8 +15,8 @@ export ZSH="/home/shawan/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME="dracula"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="dracula"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -107,6 +107,34 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# aliases
+
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../..'
+alias .5='cd ../../../..'
+alias .6='cd ../../../../..'
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# alias for git
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias status='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+alias addremote='git remote add origin'
+
 # alias ls='lsd -hA --group-dirs first'
 # alias l='ls -l'
 # alias la='ls -a'
@@ -124,10 +152,6 @@ alias lt='exa --icons -T'
 
 alias react='npx create-react-app'
 alias react-app='create-react-app'
-
-# alias to install package through npm in react app
-
-alias sc='npm install --save styled-components'
 
 # alias to install style and stylint configuration standard
 
@@ -151,16 +175,24 @@ alias c='clear'
 #alias cp='advcp -g'
 #alias mv='advmv -g'
 alias cp='rsync --info=progress2 '
+
+# pacman and yay
+
 # alias for update package
-alias update='sudo pacman -Syu'
+alias update='sudo pacman -Syyu'
 # alias to install pacman packages
 alias install='sudo pacman -S'
 # alias search package
 alias search='sudo pacman -Ss'
 # alias to uninstall packages
 alias uninstall='sudo pacman -Rns'
-#alias to remove orphand child
-alias useless='sudo pacman -Rns $(pacman -Qtdq)'
+# yay
+alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
+alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
+alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+
+
 #alias to kill vlc
 alias kill-vlc='killall -9 vlc'
 # update mirrorlist using reflector
@@ -170,6 +202,6 @@ alias genmirror='sudo reflector --latest 10 --protocol https --sort rate --save 
 #source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh
 # startship command prompt
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 source /home/shawan/.config/broot/launcher/bash/br
