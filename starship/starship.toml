@@ -1,9 +1,18 @@
+#----------------------------------------------------------
+#   _____ _______       _____   _____ _    _ _____ _____  
+#  / ____|__   __|/\   |  __ \ / ____| |  | |_   _|  __ \ 
+# | (___    | |  /  \  | |__) | (___ | |__| | | | | |__) |
+#  \___ \   | | / /\ \ |  _  / \___ \|  __  | | | |  ___/ 
+#  ____) |  | |/ ____ \| | \ \ ____) | |  | |_| |_| |     
+# |_____/   |_/_/    \_\_|  \_\_____/|_|  |_|_____|_|     
+#
+#----------------------------------------------------------                                                         
+
 # Don't print a new line at the start of the prompt
 add_newline = false
 
-# Replace the "❯" symbol in the prompt with "➜"
 [character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
+symbol = "👉"     # The "symbol" segment is being set to "👉"
 error_symbol = "✗" # symbol for error
 use_symbol_for_status = true
 
@@ -15,3 +24,63 @@ show_always = true
 # separate the prompt into two line
 [line_break]
 disabled = false
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
+
+prompt_order = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_commit",
+    "git_state",
+    "git_status",
+    "hg_branch",
+    "docker_context",
+    "package",
+    "dotnet",
+    "elixir",
+    "elm",
+    "erlang",
+    "golang",
+    "java",
+    "julia",
+    "nim",
+    "nodejs",
+    "ocaml",
+    "php",
+    "purescript",
+    "python",
+    "ruby",
+    "rust",
+    "terraform",
+    "zig",
+    "nix_shell",
+    "conda",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "crystal",
+    "cmd_duration",
+    "custom",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character",
+]
