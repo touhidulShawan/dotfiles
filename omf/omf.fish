@@ -1,3 +1,12 @@
+#-----------------------------
+#______ _____  _____ _    _ 
+# |  ____|_   _|/ ____| |  | |
+# | |__    | | | (___ | |__| |
+# |  __|   | |  \___ \|  __  |
+# | |     _| |_ ____) | |  | |
+# |_|    |_____|_____/|_|  |_|
+# -----------------------------
+
 # Path to Oh My Fish install.
 set -q XDG_DATA_HOME
   and set -gx OMF_PATH "$XDG_DATA_HOME/omf"
@@ -7,6 +16,11 @@ set -q XDG_DATA_HOME
 #export LS_COLORS="di=35"
 #export EXA_COLORS="*.zip=38;5;125:*.md=38;5;121:*.log=38;5;248:*.json=32"
 
+# alias for nvim 
+alias vim='nvim'
+alias vi='nvim'
+alias oldvim='vim'
+  
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -22,18 +36,18 @@ alias fgrep='fgrep --color=auto'
 
 # alias for my lsd command replace for ls
 
-# alias ls='lsd -hA --group-dirs first'
-# alias l='ls -l'
-# alias la='ls -a'
-# alias lla='ls -la'
-# alias lt='ls --tree'
+ alias ls='lsd -hA --group-dirs first'
+ alias l='ls -l'
+ alias la='ls -a'
+ alias lla='ls -la'
+ alias lt='ls --tree'
 
 # alias for my exa command replace for ls
-alias ls='exa -D --icons'
-alias l='exa --icons -a --group-directories-first'
-alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
-alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
-alias lt='exa --icons -T'
+#alias ls='exa -D --icons'
+#alias l='exa --icons -a --group-directories-first'
+#alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
+#alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
+#alias lt='exa --icons -T'
 
 # alias for git
 alias addall='git add .'
@@ -43,7 +57,7 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'
+alias state='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias addremote='git remote add origin'
@@ -57,7 +71,7 @@ alias c='clear'
 
 # alias for my create-rect-app
 
-alias react='npx create-react-app'
+alias react='npx create-react-app --template typescript'
 alias react-app='create-react-app'
 
 
@@ -101,7 +115,7 @@ alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /et
 source $OMF_PATH/init.fish
 
 # Add Starship command prompt
-# starship init fish | source
+ starship init fish | source
 
 # virtualfish
 #eval (python -m virtualfish auto_activation)
