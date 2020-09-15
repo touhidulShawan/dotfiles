@@ -1,3 +1,13 @@
+#----------------------
+#______ _____ _    _ 
+# |___  // ____| |  | |
+#    / /| (___ | |__| |
+#   / /  \___ \|  __  |
+#  / /__ ____) | |  | |
+# /_____|_____/|_|  |_|
+#                      
+#-----------------------
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -109,6 +119,11 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 
+# alias for nvim 
+alias vim='nvim'           
+alias vi='nvim'            
+alias oldvim='vim'
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -135,22 +150,22 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias addremote='git remote add origin'
 
-# alias ls='lsd -hA --group-dirs first'
-# alias l='ls -l'
-# alias la='ls -a'
-# alias lla='ls -la'
-# alias lt='ls --tree'
+# alias for lsd for ls
+ alias ls='lsd -hA --group-dirs first'
+ alias l='ls -l'
+ alias la='ls -a'
+ alias lla='ls -la'
+ alias lt='ls --tree'
 
 # alias for my exa command replace for ls
-alias ls='exa -D --icons'
-alias l='exa --icons -a --group-directories-first'
-alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
-alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
-alias lt='exa --icons -T'
+#alias ls='exa -D --icons'
+#alias l='exa --icons -a --group-directories-first'
+#alias la='exa -l --icons -B -g -h -t=modified --time-style=default -@ --git'
+#alias lla='exa -l -a --icons -B -g -h -t=modified --time-style=default -@ --git'
+#alias lt='exa --icons -T'
 
 # alias for my create-rect-app
-
-alias react='npx create-react-app'
+alias react='npx create-react-app --template typescript'
 alias react-app='create-react-app'
 
 # alias to install style and stylint configuration standard
@@ -204,4 +219,5 @@ source /usr/share/nvm/init-nvm.sh
 # startship command prompt
 # eval "$(starship init zsh)"
 
-source /home/shawan/.config/broot/launcher/bash/br
+#source /home/shawan/.config/broot/launcher/bash/br
+#(( ! ${+functions[p10k]} )) || p10k finalize
