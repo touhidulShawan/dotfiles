@@ -1,9 +1,23 @@
+#   ____           _____ _    _
+#  |  _ \   /\    / ____| |  | |
+#  | |_) | /  \  | (___ | |__| |
+#  |  _ < / /\ \  \___ \|  __  |
+#  | |_) / ____ \ ____) | |  | |
+#  |____/_/    \_\_____/|_|  |_|
+
 #
 # ~/.bashrc
 #
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# aliases
+
+# alias for vim
+alias vim='nvim'
+alias vi='nvim'
+alias oldvim='vim'
 
 # navigation
 alias ..='cd ..'
@@ -36,11 +50,17 @@ alias ll='exa -l --icons --color=always --group-directories-first'  # long forma
 alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
+# alias for lsd for ls
+# alias ls='lsd -hA --group-dirs first'
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+
 source /usr/share/nvm/init-nvm.sh
 
-# editor 
-export EDITOR="/usr/bin/vim"
-
-source /home/shawan/.config/broot/launcher/bash/br
+# editor
+export EDITOR="/usr/bin/nvim"
