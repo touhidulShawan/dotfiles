@@ -1,3 +1,10 @@
+#            _               _____ _____  _____ _______ _________     __
+#      /\   | |        /\   / ____|  __ \|_   _|__   __|__   __\ \   / /
+#     /  \  | |       /  \ | |    | |__) | | |    | |     | |   \ \_/ /
+#    / /\ \ | |      / /\ \| |    |  _  /  | |    | |     | |    \   /
+#   / ____ \| |____ / ____ \ |____| | \ \ _| |_   | |     | |     | |
+#  /_/    \_\______/_/    \_\_____|_|  \_\_____|  |_|     |_|     |_|
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 
 # Any items in the `env` entry below will be added as
@@ -14,19 +21,19 @@ window:
   # Window dimensions in character columns and lines
   # (changes require restart)
   dimensions:
-    columns: 130
-    lines: 32
+    columns: 117
+    lines: 28
 
   # The FreeType rasterizer needs to know the device DPI for best results
   # (changes require restart)
   # s
 
   padding:
-    x: 0
+    x: 5
     y: 5
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 4
+#tabspaces: 4
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -35,29 +42,29 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: MesloLGS NF
+    family: JetBrains Mono
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: MesloLGS NF
+    family: JetBrains Mono
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: MesloLGS NF
+    family: JetBrains Mono
     # Style can be specified to pick a specific face.
     # style: Italic
 
-  # Point size of the font
-  size: 11.0
+    # Point size of the font
+    size: 11
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 0
-    y: 0
+    x: 1
+    y: 3
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -69,46 +76,195 @@ font:
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
+custom_cursor_colors: true
 
-# color themes
-
-# Colors (Dracula)
-colors:
-  # Default colors
-  primary:
-    background: "#202022"
-    foreground: "#FFF222"
-
-  # Normal colors
-  normal:
-    black: "#000000"
-    red: "#ff5555"
-    green: "#50fa7b"
-    yellow: "#f1fa8c"
-    blue: "#caa9fa"
-    magenta: "#ff79c6"
-    cyan: "#8be9fd"
-    white: "#bfbfbf"
-
-  # Bright colors
-  bright:
-    black: "#575b70"
-    red: "#ff6e67"
-    green: "#5af78e"
-    yellow: "#f4f99d"
-    blue: "#caa9fa"
-    magenta: "#ff92d0"
-    cyan: "#9aedfe"
-    white: "#e6e6e6"
-
-# Colors (Ayu Dark)
+# # KDE Breeze (Ported from Konsole)
+#colors:
+#   # Default colors
+#   primary:
+#     background: "#232627"
+#     foreground: "#fcfcfc"
+#
+#     dim_foreground: "#eff0f1"
+#     bright_foreground: "#ffffff"
+#     dim_background: "#31363b"
+#     bright_background: "#000000"
+#
+#   # Normal colors
+#   normal:
+#     black: "#232627"
+#     red: "#ed1515"
+#     green: "#11d116"
+#     yellow: "#f67400"
+#     blue: "#1d99f3"
+#     magenta: "#9b59b6"
+#     cyan: "#1abc9c"
+#     white: "#fcfcfc"
+#
+#   # Bright colors
+#   bright:
+#     black: "#7f8c8d"
+#     red: "#c0392b"
+#     green: "#1cdc9a"
+#     yellow: "#fdbc4b"
+#     blue: "#3daee9"
+#     magenta: "#8e44ad"
+#     cyan: "#16a085"
+#     white: "#ffffff"
+#
+#   # Dim colors
+#   dim:
+#     black: "#31363b"
+#     red: "#783228"
+#     green: "#17a262"
+#     yellow: "#b65619"
+#     blue: "#1b668f"
+#     magenta: "#614a73"
+#     cyan: "#186c60"
+#     white: "#63686d"
+#
 # colors:
+#   # Default colors
+#   primary:
+#     background: "#1E1E3F"
+#     foreground: "#E1EFFF"
+
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: "#1E1E3F"
+#     cursor: "#FAD000"
+
+#   # Normal colors
+#   normal:
+#     black: "#000000"
+#     red: "#EC3A37"
+#     green: "#75e44c"
+#     yellow: "#FAD000"
+#     blue: "#6943FF"
+#     magenta: "#FF2C70"
+#     cyan: "#80FCFF"
+#     white: "#FFFFFF"
+
+#   # Bright colors
+#   bright:
+#     black: "#5C5C61"
+#     red: "#EC3A37"
+#     green: "#3AD900"
+#     yellow: "#FAD000"
+#     blue: "#6943FF"
+#     magenta: "#FB94FF"
+#     cyan: "#80FCFF"
+#     white: "#2D2B55"
+
+# Colors (Shades_of_Purple)
+#colors:
+#   # Default colors
+#   primary:
+#     background: "#1E1E3F"
+#     foreground: "#E1EFFF"
+#
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: "#1E1E3F"
+#     cursor: "#FAD000"
+#
+#   # Normal colors
+#   normal:
+#     black: "#000000"
+#     red: "#EC3A37"
+#     green: "#75e44c"
+#     yellow: "#FAD000"
+#     blue: "#6943FF"
+#     magenta: "#FF2C70"
+#     cyan: "#80FCFF"
+#     white: "#FFFFFF"
+#
+#   # Bright colors
+#   bright:
+#     black: "#5C5C61"
+#     red: "#EC3A37"
+#     green: "#3AD900"
+#     yellow: "#FAD000"
+#     blue: "#6943FF"
+#     magenta: "#FB94FF"
+#     cyan: "#80FCFF"
+#     white: "#2D2B55"
+#
+# Colors (Dracula)
+#colors:
+#  # Default colors
+#  primary:
+#    background: "0x282a36"
+#    foreground: "0xf8f8f2"
+#
+#    # Bright and dim foreground colors
+#    #
+#    # The dimmed foreground color is calculated automatically if it is not present.
+#    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+#    # is `false`, the normal foreground color will be used.
+#    #dim_foreground: '0x9a9a9a'
+#    #bright_foreground: '0xffffff'
+#
+#  # Cursor colors
+#  #
+#  # Colors which should be used to draw the terminal cursor. If these are unset,
+#  # the cursor color will be the inverse of the cell color.
+#  cursor:
+#    text: "0x44475a"
+#    cursor: "0xf8f8f2"
+#
+#  # Selection colors
+#  #
+#  # Colors which should be used to draw the selection area. If selection
+#  # background is unset, selection color will be the inverse of the cell colors.
+#  # If only text is unset the cell text color will remain the same.
+#  selection:
+#    text: "0xf8f8f2"
+#    background: "0x44475a"
+#
+#  # Normal colors
+#  normal:
+#    black: "0x000000"
+#    red: "0xff5555"
+#    green: "0x50fa7b"
+#    yellow: "0xf1fa8c"
+#    blue: "0xbd93f9"
+#    magenta: "0xff79c6"
+#    cyan: "0x8be9fd"
+#    white: "0xbfbfbf"
+#
+#  # Bright colors
+#  bright:
+#    black: "0x4d4d4d"
+#    red: "0xff6e67"
+#    green: "0x5af78e"
+#    yellow: "0xf4f99d"
+#    blue: "0xcaa9fa"
+#    magenta: "0xff92d0"
+#    cyan: "0x9aedfe"
+#    white: "0xe6e6e6"
+#
+#  # Dim colors
+#  #
+#  # If the dim colors are not set, they will be calculated automatically based
+#  # on the `normal` colors.
+#  dim:
+#    black: "0x14151b"
+#    red: "0xff2222"
+#    green: "0x1ef956"
+#    yellow: "0xebf85b"
+#    blue: "0x4d5b86"
+#    magenta: "0xff46b0"
+#    cyan: "0x59dffc"
+#    white: "0xe6e6d1"
+#
+# Colors (Ayu Dark)
+#colors:
 #   # Default colors
 #   primary:
 #     background: "#0A0E14"
 #     foreground: "#B3B1AD"
-
+#
 #   # Normal colors
 #   normal:
 #     black: "#01060E"
@@ -119,7 +275,7 @@ colors:
 #     magenta: "#FAE994"
 #     cyan: "#90E1C6"
 #     white: "#C7C7C7"
-
+#
 #   # Bright colors
 #   bright:
 #     black: "#686868"
@@ -130,37 +286,256 @@ colors:
 #     magenta: "#FFEE99"
 #     cyan: "#95E6CB"
 #     white: "#FFFFFF"
-
+#
+# Colors (Ayu Mirage)
+#colors:
+#   # Default colors
+#   primary:
+#     background: "#202734"
+#     foreground: "#CBCCC6"
+#
+#   # Normal colors
+#   normal:
+#     black: "#191E2A"
+#     red: "#FF3333"
+#     green: "#BAE67E"
+#     yellow: "#FFA759"
+#     blue: "#73D0FF"
+#     magenta: "#FFD580"
+#     cyan: "#95E6CB"
+#     white: "#C7C7C7"
+#
+#   # Bright colors
+#   bright:
+#     black: "#686868"
+#     red: "#F27983"
+#     green: "#A6CC70"
+#     yellow: "#FFCC66"
+#     blue: "#5CCFE6"
+#     magenta: "#FFEE99"
+#     cyan: "#95E6CB"
+#     white: "#FFFFFF"
+#
 # Colors (Gruvbox dark)
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '0x1d2021'
+    background: "0x282828"
+    # soft contrast: background = '0x32302f'
+    foreground: "0xebdbb2"
+
+  # Normal colors
+  normal:
+    black: "0x282828"
+    red: "0xcc241d"
+    green: "0x98971a"
+    yellow: "0xd79921"
+    blue: "0x458588"
+    magenta: "0xb16286"
+    cyan: "0x689d6a"
+    white: "0xa89984"
+
+  # Bright colors
+  bright:
+    black: "0x928374"
+    red: "0xfb4934"
+    green: "0xb8bb26"
+    yellow: "0xfabd2f"
+    blue: "0x83a598"
+    magenta: "0xd3869b"
+    cyan: "0x8ec07c"
+    white: "0xebdbb2"
+#
+# Colors (Darkside)
+# colors:
+# primary:
+#   background: "#222324"
+#   foreground: "#BABABA"
+
+# # Normal colors
+# normal:
+#   black: "#000000"
+#   red: "#E8341C"
+#   green: "#68C256"
+#   yellow: "#F2D42C"
+#   blue: "#1C98E8"
+#   magenta: "#8E69C9"
+#   cyan: "#1C98E8"
+#   white: "#BABABA"
+
+# # Bright colors
+# bright:
+#   black: "#666666"
+#   red: "#E05A4F"
+#   green: "#77B869"
+#   yellow: "#EFD64B"
+#   blue: "#387CD3"
+#   magenta: "#957BBE"
+#   cyan: "#3D97E2"
+#   white: "#BABABA"
+
+# Colors (Darktooth)
 # colors:
 #   # Default colors
 #   primary:
-#     # hard contrast: background = '0x1d2021'
-#     background: "0x282828"
-#     # soft contrast: background = '0x32302f'
-#     foreground: "0xebdbb2"
+#     background: "#282828"
+#     foreground: "#fdf4c1"
 
 #   # Normal colors
 #   normal:
-#     black: "0x282828"
-#     red: "0xcc241d"
-#     green: "0x98971a"
-#     yellow: "0xd79921"
-#     blue: "0x458588"
-#     magenta: "0xb16286"
-#     cyan: "0x689d6a"
-#     white: "0xa89984"
+#     black: "#282828"
+#     red: "#9d0006"
+#     green: "#79740e"
+#     yellow: "#b57614"
+#     blue: "#076678"
+#     magenta: "#8f3f71"
+#     cyan: "#00a7af"
+#     white: "#fdf4c1"
 
 #   # Bright colors
 #   bright:
-#     black: "0x928374"
-#     red: "0xfb4934"
-#     green: "0xb8bb26"
-#     yellow: "0xfabd2f"
-#     blue: "0x83a598"
-#     magenta: "0xd3869b"
-#     cyan: "0x8ec07c"
-#     white: "0xebdbb2"
+#     black: "#32302f"
+#     red: "#fb4933"
+#     green: "#b8bb26"
+#     yellow: "#fabd2f"
+#     blue: "#83a598"
+#     magenta: "#d3869b"
+#     cyan: "#3fd7e5"
+#     white: "#ffffc8"
+
+#   # Dim colors (Optional)
+#   dim:
+#     black: "#1d2021"
+#     red: "#421e1e"
+#     green: "#232b0f"
+#     yellow: "#4d3b27"
+#     blue: "#2b3c44"
+#     magenta: "#4e3d45"
+#     cyan: "#205161"
+#     white: "#f4e8ba"
+
+# Colors (Hyper)
+# colors:
+#   # Default colors
+#   primary:
+#     background: "#000000"
+#     foreground: "#ffffff"
+#   cursor:
+#     text: "#F81CE5"
+#     cursor: "#ffffff"
+
+#   # Normal colors
+#   normal:
+#     black: "#000000"
+#     red: "#fe0100"
+#     green: "#33ff00"
+#     yellow: "#feff00"
+#     blue: "#0066ff"
+#     magenta: "#cc00ff"
+#     cyan: "#00ffff"
+#     white: "#d0d0d0"
+
+#   # Bright colors
+#   bright:
+#     black: "#808080"
+#     red: "#fe0100"
+#     green: "#33ff00"
+#     yellow: "#feff00"
+#     blue: "#0066ff"
+#     magenta: "#cc00ff"
+#     cyan: "#00ffff"
+#     white: "#FFFFFF"
+
+# Colors (Material Theme)
+# colors:
+#   # Default colors
+#   primary:
+#     background: "#263238"
+#     foreground: "#eeffff"
+
+#   # Normal colors
+#   normal:
+#     black: "#000000" # Arbitrary
+#     red: "#e53935"
+#     green: "#91b859"
+#     yellow: "#ffb62c"
+#     blue: "#6182b8"
+#     magenta: "#ff5370" # Dark pink of the original material theme
+#     cyan: "#39adb5"
+#     white: "#a0a0a0" # Arbitrary
+
+#   # Bright colors
+#   bright:
+#     black: "#4e4e4e" # Arbitrary
+#     red: "#ff5370"
+#     green: "#c3e88d"
+#     yellow: "#ffcb6b"
+#     blue: "#82aaff"
+#     magenta: "#f07178" # Pink of the original material theme
+#     cyan: "#89ddff"
+#     white: "#ffffff" # Arbitrary
+
+# Colors (One Dark)
+#colors:
+#   # Default colors
+#   primary:
+#     background: "#282c34"
+#     foreground: "#abb2bf"
+#
+#   # Normal colors
+#   normal:
+#     # NOTE: Use '#131613' for the `black` color if you'd like to see
+#     # black text on the background.
+#     black: "#282c34"
+#     red: "#e06c75"
+#     green: "#98c379"
+#     yellow: "#d19a66"
+#     blue: "#61afef"
+#     magenta: "#c678dd"
+#     cyan: "#56b6c2"
+#     white: "#abb2bf"
+#
+#   # Bright colors
+#   bright:
+#     black: "#5c6370"
+#     red: "#e06c75"
+#     green: "#98c379"
+#     yellow: "#d19a66"
+#     blue: "#61afef"
+#     magenta: "#c678dd"
+#     cyan: "#56b6c2"
+#     white: "#ffffff"
+#
+# Colors (Nord)
+#colors:
+#   # Default colors
+#   primary:
+#     background: '#2E3440'
+#     foreground: '#D8DEE9'
+#
+#   # Normal colors
+#   normal:
+#     black:   '#3B4252'
+#     red:     '#BF616A'
+#     green:   '#A3BE8C'
+#     yellow:  '#EBCB8B'
+#     blue:    '#81A1C1'
+#     magenta: '#B48EAD'
+#     cyan:    '#88C0D0'
+#     white:   '#E5E9F0'
+#
+#   # Bright colors
+#   bright:
+#     black:   '#4C566A'
+#     red:     '#BF616A'
+#     green:   '#A3BE8C'
+#     yellow:  '#EBCB8B'
+#     blue:    '#81A1C1'
+#     magenta: '#B48EAD'
+#     cyan:    '#8FBCBB'
+#     white:   '#ECEFF4'
+#
 
 # Visual Bell
 #
@@ -184,7 +559,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
