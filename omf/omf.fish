@@ -12,9 +12,41 @@ set -q XDG_DATA_HOME
   and set -gx OMF_PATH "$XDG_DATA_HOME/omf"
   or set -gx OMF_PATH "$HOME/.local/share/omf"
 
+# colors 
+
+set -l foreground f8f8f2
+set -l selection  44475a
+set -l comment    6272a4
+
+set -l red    ff5555
+set -l orange ffb86c
+set -l yellow f4f99d
+set -l green  50fa7b
+set -l cyan   8be9fd
+set -l pink   ff79c6
+set -l purple bd93f9
+
+set -g fish_color_autosuggestion $comment
+set -g fish_color_command        $cyan
+set -g fish_color_comment        $comment
+set -g fish_color_end            $orange
+set -g fish_color_error          $red
+set -g fish_color_escape         $pink
+set -g fish_color_normal         $foreground
+set -g fish_color_operator       $green
+set -g fish_color_param          $purple
+set -g fish_color_quote          $yellow
+set -g fish_color_redirection    $foreground
+set -g fish_color_search_match   --background=$selection
+set -g fish_color_selection      --background=$selection
 
 #export LS_COLORS="di=35"
 #export EXA_COLORS="*.zip=38;5;125:*.md=38;5;121:*.log=38;5;248:*.json=32"
+
+
+# alias for wifi on/OFF
+alias start_wifi='nmcli radio wifi on'
+alias stop_wifi='nmcli radio wifi off'
 
 # alias for nvim 
 alias vim='nvim'
@@ -111,6 +143,7 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 alias kill-vlc='killall -9 vlc'
 # update mirrorlist using reflector
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 
