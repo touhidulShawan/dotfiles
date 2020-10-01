@@ -22,7 +22,7 @@ window:
   # (changes require restart)
   dimensions:
     columns: 117
-    lines: 28
+    lines: 27
 
   # The FreeType rasterizer needs to know the device DPI for best results
   # (changes require restart)
@@ -42,19 +42,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: JetBrains Mono
+    family: MesloLGS NF 
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: JetBrains Mono
+    family: MesloLGS NF
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: JetBrains Mono
+    family: MesloLGS NF 
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -78,6 +78,41 @@ font:
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
 
+#----------- ALL COLOR SCHEMES ---------
+#
+# Colors (Night Owl by Sarah Drasner)
+colors:
+  # Default colors
+  primary:
+    background: '0x011627'
+    foreground: '0xd6deeb'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0xffffff'
+    cursor: '0x7e57c2'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xef5350'
+    green:   '0x22da6e'
+    yellow:  '0xaddb67'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x21c7a8'
+    white:   '0xffffff'
+
+  # Bright colors
+  bright:
+    black:   '0x575656'
+    red:     '0xef5350'
+    green:   '0x22da6e'
+    yellow:  '0xffeb95'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x7fdbca'
+    white:   '0xffffff'
 # # KDE Breeze (Ported from Konsole)
 #colors:
 #   # Default colors
@@ -257,7 +292,7 @@ custom_cursor_colors: true
 #    magenta: "0xff46b0"
 #    cyan: "0x59dffc"
 #    white: "0xe6e6d1"
-#
+
 # Colors (Ayu Dark)
 #colors:
 #   # Default colors
@@ -317,35 +352,35 @@ custom_cursor_colors: true
 #     white: "#FFFFFF"
 #
 # Colors (Gruvbox dark)
-colors:
-  # Default colors
-  primary:
-    # hard contrast: background = '0x1d2021'
-    background: "0x282828"
-    # soft contrast: background = '0x32302f'
-    foreground: "0xebdbb2"
-
-  # Normal colors
-  normal:
-    black: "0x282828"
-    red: "0xcc241d"
-    green: "0x98971a"
-    yellow: "0xd79921"
-    blue: "0x458588"
-    magenta: "0xb16286"
-    cyan: "0x689d6a"
-    white: "0xa89984"
-
-  # Bright colors
-  bright:
-    black: "0x928374"
-    red: "0xfb4934"
-    green: "0xb8bb26"
-    yellow: "0xfabd2f"
-    blue: "0x83a598"
-    magenta: "0xd3869b"
-    cyan: "0x8ec07c"
-    white: "0xebdbb2"
+#colors:
+#  # Default colors
+#  primary:
+#    # hard contrast: background = '0x1d2021'
+#    background: "0x282828"
+#    # soft contrast: background = '0x32302f'
+#    foreground: "0xebdbb2"
+#
+#  # Normal colors
+#  normal:
+#    black: "0x282828"
+#    red: "0xcc241d"
+#    green: "0x98971a"
+#    yellow: "0xd79921"
+#    blue: "0x458588"
+#    magenta: "0xb16286"
+#    cyan: "0x689d6a"
+#    white: "0xa89984"
+#
+#  # Bright colors
+#  bright:
+#    black: "0x928374"
+#    red: "0xfb4934"
+#    green: "0xb8bb26"
+#    yellow: "0xfabd2f"
+#    blue: "0x83a598"
+#    magenta: "0xd3869b"
+#    cyan: "0x8ec07c"
+#    white: "0xebdbb2"
 #
 # Colors (Darkside)
 # colors:
@@ -416,7 +451,7 @@ colors:
 #     white: "#f4e8ba"
 
 # Colors (Hyper)
-# colors:
+#colors:
 #   # Default colors
 #   primary:
 #     background: "#000000"
@@ -424,7 +459,7 @@ colors:
 #   cursor:
 #     text: "#F81CE5"
 #     cursor: "#ffffff"
-
+#
 #   # Normal colors
 #   normal:
 #     black: "#000000"
@@ -435,7 +470,7 @@ colors:
 #     magenta: "#cc00ff"
 #     cyan: "#00ffff"
 #     white: "#d0d0d0"
-
+#
 #   # Bright colors
 #   bright:
 #     black: "#808080"
@@ -446,14 +481,14 @@ colors:
 #     magenta: "#cc00ff"
 #     cyan: "#00ffff"
 #     white: "#FFFFFF"
-
+#
 # Colors (Material Theme)
-# colors:
+#colors:
 #   # Default colors
 #   primary:
 #     background: "#263238"
 #     foreground: "#eeffff"
-
+#
 #   # Normal colors
 #   normal:
 #     black: "#000000" # Arbitrary
@@ -464,7 +499,7 @@ colors:
 #     magenta: "#ff5370" # Dark pink of the original material theme
 #     cyan: "#39adb5"
 #     white: "#a0a0a0" # Arbitrary
-
+#
 #   # Bright colors
 #   bright:
 #     black: "#4e4e4e" # Arbitrary
@@ -475,7 +510,7 @@ colors:
 #     magenta: "#f07178" # Pink of the original material theme
 #     cyan: "#89ddff"
 #     white: "#ffffff" # Arbitrary
-
+#
 # Colors (One Dark)
 #colors:
 #   # Default colors
@@ -506,7 +541,7 @@ colors:
 #     magenta: "#c678dd"
 #     cyan: "#56b6c2"
 #     white: "#ffffff"
-#
+
 # Colors (Nord)
 #colors:
 #   # Default colors
