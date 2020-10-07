@@ -20,18 +20,27 @@ env:
 window:
   # Window dimensions in character columns and lines
   # (changes require restart)
-  dimensions:
-    columns: 117
-    lines: 27
+  #  dimensions:
+  #    columns: 117
+  #    lines: 27
 
   # The FreeType rasterizer needs to know the device DPI for best results
   # (changes require restart)
   # s
 
   padding:
-    x: 5
-    y: 5
+    x: 6
+    y: 6
 
+  title: Alacritty
+
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+scrolling:
+  history: 5000
 # Display tabs using this many cells (changes require restart)
 #tabspaces: 4
 
@@ -42,7 +51,7 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: MesloLGS NF 
+    family: MesloLGS NF
     # Style can be specified to pick a specific face.
     # style: Regular
 
@@ -54,7 +63,7 @@ font:
 
   # The italic font face
   italic:
-    family: MesloLGS NF 
+    family: MesloLGS NF
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -63,8 +72,8 @@ font:
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: 1
-    y: 3
+    x: 0
+    y: 1
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -80,6 +89,60 @@ custom_cursor_colors: true
 
 #----------- ALL COLOR SCHEMES ---------
 #
+# Tomorrow Night Bright
+#colors:
+#  # Default colors
+#  primary:
+#    background: '0x282c34'
+#    foreground: '0xbbc2cf'
+#
+#    # Bright and dim foreground colors
+#    #
+#    # The dimmed foreground color is calculated automatically if it is not present.
+#    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+#    # is `false`, the normal foreground color will be used.
+#    #dim_foreground: '0x9a9a9a'
+#    #bright_foreground: '0xffffff'
+#
+#  # Cursor colors
+#  #
+#  # Colors which should be used to draw the terminal cursor. If these are unset,
+#  # the cursor color will be the inverse of the cell color.
+#  #cursor:
+#  #  text: '0x000000'
+#  #  cursor: '0xffffff'
+#
+#  # Selection colors
+#  #
+#  # Colors which should be used to draw the selection area. If selection
+#  # background is unset, selection color will be the inverse of the cell colors.
+#  # If only text is unset the cell text color will remain the same.
+#  selection:
+#    text: '0xbbc2cf'
+#    background: '0x282c34'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x1c1f24'
+#    red:     '0xff6c6b'
+#    green:   '0x98be65'
+#    yellow:  '0xda8548'
+#    blue:    '0x51afef'
+#    magenta: '0xc678dd'
+#    cyan:    '0x5699af'
+#    white:   '0x202328'
+#
+#  # Bright colors
+#  bright:
+#    black:   '0x5b6268'
+#    red:     '0xda8548'
+#    green:   '0x4db5bd'
+#    yellow:  '0xecbe7b'
+#    blue:    '0x3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+#    magenta: '0xa9a1e1'
+#    cyan:    '0x46d9ff'
+#    white:   '0xdfdfdf'
+
 # Colors (Night Owl by Sarah Drasner)
 colors:
   # Default colors
@@ -113,6 +176,7 @@ colors:
     magenta: '0xc792ea'
     cyan:    '0x7fdbca'
     white:   '0xffffff'
+# --------------------------
 # # KDE Breeze (Ported from Konsole)
 #colors:
 #   # Default colors
