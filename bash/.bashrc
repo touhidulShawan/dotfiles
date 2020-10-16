@@ -7,14 +7,28 @@
 
 #
 # ~/.bashrc
+# This load nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 #
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# set global editor neovim
+export EDITOR="/usr/bin/nvim"
+
+eval "$(starship init bash)"
+
 # aliases
 
-# alias for vim
+# alias for ranger
+alias r='ranger'
+
+# alias for wifi on/OFF
+alias start_wifi='nmcli radio wifi on'
+alias stop_wifi='nmcli radio wifi off'
+
+# alias for nvim
 alias vim='nvim'
 alias vi='nvim'
 alias oldvim='vim'
@@ -27,40 +41,84 @@ alias .4='cd ../../..'
 alias .5='cd ../../../..'
 alias .6='cd ../../../../..'
 
-# pacman and yay
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
-alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
-alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
-
-# shutdown or reboot
-alias shutdown="sudo shutdown now"
-alias reboot="sudo reboot"
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Changing "ls" to "exa"
-alias ls='exa -al --icons --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --icons --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --icons --color=always --group-directories-first'  # long format
-alias lt='exa -aT --icons --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+# alias for my lsd command replace for ls
 
-# alias for lsd for ls
-# alias ls='lsd -hA --group-dirs first'
-# alias l='ls -l'
-# alias la='ls -a'
-# alias lla='ls -la'
-# alias lt='ls --tree'
+ alias ls='lsd -hA --group-dirs first'
+ alias l='ls -l'
+ alias la='ls -a'
+ alias lla='ls -la'
+ alias lt='ls --tree'
+
+# alias for git
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias state='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+alias addremote='git remote add origin'
+alias clone='git clone'
+
+# alias for exit
+alias e='exit'
+
+#alias for clear
+alias c='clear'
+
+# alias for my create-rect-app
+
+alias react='npx create-react-app --template typescript'
+alias react-app='create-react-app'
+
+
+# alias to  install package of stylelint and stylelint-config-standard
+
+alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
+
+# alias for rm
+
+alias remove='sudo rm -r'
+
+# alias for reboot and shutdown
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown'
+
+# alias for advanced copy and move
+#alias cp='advcp -g'
+#alias mv='advmv -g'
+alias cp='rsync --info=progress2 '
+
+# alias pacman and yay
+
+# alias for update package
+alias update='sudo pacman -Syyu'
+# alias to install pacman packages
+alias install='sudo pacman -S'
+# alias search package
+alias search='sudo pacman -Ss'
+# alias to uninstall packages
+alias uninstall='sudo pacman -Rns'
+alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
+alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
+alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
+# alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+
+#alias to kill vlc
+alias kill-vlc='killall -9 vlc'
+# update mirrorlist using reflector
+alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-source /usr/share/nvm/init-nvm.sh
-
 # editor
-export EDITOR="/usr/bin/nvim"
