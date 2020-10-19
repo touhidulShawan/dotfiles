@@ -19,6 +19,9 @@ source $OMF_PATH/init.fish
 
 set -x EDITOR nvim
 
+# alias for nvim
+alias vim='nvim'
+
 # alias for ranger
 alias r='ranger'
 
@@ -110,5 +113,9 @@ alias kill-vlc='killall -9 vlc'
 # update mirrorlist using reflector
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
-# Add Starship command prompt
-starship init fish | source
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx -- -keeptty
+    end
+end

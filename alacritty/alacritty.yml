@@ -175,7 +175,7 @@ custom_cursor_colors: true
 #    magenta: '0xa9a1e1'
 #    cyan:    '0x46d9ff'
 #    white:   '0xdfdfdf'
-#
+
 # Colors (Night Owl by Sarah Drasner)
 colors:
   # Default colors
@@ -447,7 +447,7 @@ colors:
 #     magenta: "#FFEE99"
 #     cyan: "#95E6CB"
 #     white: "#FFFFFF"
-#
+
 # Colors (Gruvbox dark)
 #colors:
 #  # Default colors
