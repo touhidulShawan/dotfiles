@@ -1,19 +1,12 @@
 #----------------------------------------------------------
-#   _____ _______       _____   _____ _    _ _____ _____  
-#  / ____|__   __|/\   |  __ \ / ____| |  | |_   _|  __ \ 
+#   _____ _______       _____   _____ _    _ _____ _____
+#  / ____|__   __|/\   |  __ \ / ____| |  | |_   _|  __ \
 # | (___    | |  /  \  | |__) | (___ | |__| | | | | |__) |
-#  \___ \   | | / /\ \ |  _  / \___ \|  __  | | | |  ___/ 
-#  ____) |  | |/ ____ \| | \ \ ____) | |  | |_| |_| |     
-# |_____/   |_/_/    \_\_|  \_\_____/|_|  |_|_____|_|     
+#  \___ \   | | / /\ \ |  _  / \___ \|  __  | | | |  ___/
+#  ____) |  | |/ ____ \| | \ \ ____) | |  | |_| |_| |
+# |_____/   |_/_/    \_\_|  \_\_____/|_|  |_|_____|_|
 #
-#----------------------------------------------------------                                                         
-
-# Don't print a new line at the start of the prompt
-# Use custom format
-#format = """
-#[┌───────────────────>](bold green)
-#[│](bold green)$directory$rust$package
-#[└─>](bold green) """
+#----------------------------------------------------------
 
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
@@ -22,14 +15,14 @@ scan_timeout = 10
 add_newline = false
 
 [character]
-success_symbol = "[👉](gold)"
+#success_symbol = "[👉](gold)"
+success_symbol = "[❯❯❯](gold)"
 error_symbol = "[✗](bold red)"
-vicmd_symbol = "[V](bold green)"
+vicmd_symbol = "[vi ➜](bold green)"
 
 # show task completion time
 [cmd_duration]
 min_time = 500
-format = "took [$duration](bold yellow)"
 
 [directory]
 truncation_length = 8
@@ -83,12 +76,8 @@ style = "bold red"
 symbol = "+ "
 threshold = 4
 
-[nodejs]
-format = "via [🤖 $version](bold green) "
-
 [status]
 style = "bg:blue"
 symbol = "💣 "
 format = "[\\[$symbol$status\\]]($style) "
 disabled = false
-
