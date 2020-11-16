@@ -16,7 +16,7 @@ add_newline = false
 
 [character]
 #success_symbol = "[👉](gold)"
-success_symbol = "[❯❯❯](gold)"
+success_symbol = "[❯❯❯](yellow)"
 error_symbol = "[✗](bold red)"
 vicmd_symbol = "[vi ➜](bold green)"
 
