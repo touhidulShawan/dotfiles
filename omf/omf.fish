@@ -7,7 +7,6 @@
 # |_|    |_____|_____/|_|  |_|
 # -----------------------------
 
-
 # Path to Oh My Fish install.
 set -q XDG_DATA_HOME
   and set -gx OMF_PATH "$XDG_DATA_HOME/omf"
@@ -16,14 +15,14 @@ set -q XDG_DATA_HOME
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 
-
 set -x EDITOR nvim
 
-# alias for nvim
-alias vim='nvim'
 
 # alias for ranger
 alias r='ranger'
+
+# alias for bashmount
+alias bm='bashmount'
 
 # alias for wifi on/OFF
 alias start_wifi='nmcli radio wifi on'
@@ -70,6 +69,9 @@ alias e='exit'
 #alias for clear
 alias c='clear'
 
+#alias for copy
+alias cp='cp -r -g'
+
 # alias for my create-rect-app
 
 alias react='npx create-react-app --template typescript'
@@ -91,7 +93,7 @@ alias shutdown='sudo shutdown'
 # alias for advanced copy and move
 #alias cp='advcp -g'
 #alias mv='advmv -g'
-alias cp='rsync --info=progress2 '
+#alias cp='rsync --info=progress2 '
 
 # alias pacman and yay
 
