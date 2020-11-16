@@ -17,8 +17,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # set global editor neovim
 export EDITOR="/usr/bin/nvim"
 
-eval "$(starship init bash)"
-
 # aliases
 
 # alias for ranger
