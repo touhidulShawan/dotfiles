@@ -669,7 +669,6 @@ colors:
 #     cyan:    '#8FBCBB'
 #     white:   '#ECEFF4'
 #
-
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -696,6 +695,7 @@ bell:
   animation: EaseOutExpo
   duration: 0
 
+#background_opacity: 0.65
 # Key bindings
 #
 # Each binding is defined as an object with some properties. Most of the
