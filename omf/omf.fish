@@ -72,18 +72,12 @@ alias c='clear'
 #alias for copy
 alias cp='cp -r -g'
 
-# alias for my create-rect-app
-
-alias react='npx create-react-app --template typescript'
-alias react-app='create-react-app'
-
 
 # alias to  install package of stylelint and stylelint-config-standard
 
 alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
 
 # alias for rm
-
 alias remove='sudo rm -r'
 
 # alias for reboot and shutdown
@@ -110,8 +104,6 @@ alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR 
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 # alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
-#alias to kill vlc
-alias kill-vlc='killall -9 vlc'
 # update mirrorlist using reflector
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 

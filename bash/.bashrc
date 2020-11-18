@@ -5,12 +5,6 @@
 #  | |_) / ____ \ ____) | |  | |
 #  |____/_/    \_\_____/|_|  |_|
 
-#
-# ~/.bashrc
-# This load nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -119,4 +113,4 @@ alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /et
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# editor
+source /usr/share/nvm/init-nvm.sh
