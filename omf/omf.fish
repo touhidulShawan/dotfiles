@@ -18,9 +18,6 @@ source $OMF_PATH/init.fish
 set -x EDITOR nvim
 
 
-# alias for ranger
-alias r='ranger'
-
 # alias for bashmount
 alias bm='bashmount'
 
@@ -49,20 +46,6 @@ alias fgrep='fgrep --color=auto'
  alias lla='ls -la'
  alias lt='ls --tree'
 
-# alias for git
-alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin'
-alias state='git status'
-alias tag='git tag'
-alias newtag='git tag -a'
-alias addremote='git remote add origin'
-alias clone='git clone'
-
 # alias for exit
 alias e='exit'
 
@@ -72,22 +55,12 @@ alias c='clear'
 #alias for copy
 alias cp='cp -r -g'
 
-
-# alias to  install package of stylelint and stylelint-config-standard
-
-alias stylelint='npm install --save-dev stylelint stylelint-config-standard'
-
 # alias for rm
 alias remove='sudo rm -r'
 
 # alias for reboot and shutdown
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
-
-# alias for advanced copy and move
-#alias cp='advcp -g'
-#alias mv='advmv -g'
-#alias cp='rsync --info=progress2 '
 
 # alias pacman and yay
 
@@ -107,9 +80,11 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 # update mirrorlist using reflector
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
+starship init fish | source
+
 # Start X at login
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx -- -keeptty
-    end
-end
+#if status is-login
+#    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+#        exec startx -- -keeptty
+#    end
+#end
