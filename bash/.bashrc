@@ -40,6 +40,9 @@ alias fgrep='fgrep --color=auto'
  alias lla='ls -la'
  alias lt='ls --tree'
 
+# [bat as MANPAGER]
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # alias for exit
 alias e='exit'
 
@@ -56,7 +59,7 @@ alias cp='cp -r -g'
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
 
-# alias pacman and yay
+# alias pacman
 # alias for update package
 alias update='sudo pacman -Syyu'
 # alias to install pacman packages
@@ -65,8 +68,6 @@ alias install='sudo pacman -S'
 alias search='sudo pacman -Ss'
 # alias to uninstall packages
 alias uninstall='sudo pacman -Rns'
-alias yaysua="yay -Sua --noconfirm"              # update only AUR pkgs
-alias yaysyu="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
 # alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
@@ -79,4 +80,25 @@ PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
 
-
+#dracula theme for tty
+if [ "$TERM" = "linux" ]; then
+	printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
+	printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'
+	printf %b '\e]P0282a36'    # redefine 'black'          as 'dracula-bg'
+	printf %b '\e]P86272a4'    # redefine 'bright-black'   as 'dracula-comment'
+	printf %b '\e]P1ff5555'    # redefine 'red'            as 'dracula-red'
+	printf %b '\e]P9ff7777'    # redefine 'bright-red'     as '#ff7777'
+	printf %b '\e]P250fa7b'    # redefine 'green'          as 'dracula-green'
+	printf %b '\e]PA70fa9b'    # redefine 'bright-green'   as '#70fa9b'
+	printf %b '\e]P3f1fa8c'    # redefine 'brown'          as 'dracula-yellow'
+	printf %b '\e]PBffb86c'    # redefine 'bright-brown'   as 'dracula-orange'
+	printf %b '\e]P4bd93f9'    # redefine 'blue'           as 'dracula-purple'
+	printf %b '\e]PCcfa9ff'    # redefine 'bright-blue'    as '#cfa9ff'
+	printf %b '\e]P5ff79c6'    # redefine 'magenta'        as 'dracula-pink'
+	printf %b '\e]PDff88e8'    # redefine 'bright-magenta' as '#ff88e8'
+	printf %b '\e]P68be9fd'    # redefine 'cyan'           as 'dracula-cyan'
+	printf %b '\e]PE97e2ff'    # redefine 'bright-cyan'    as '#97e2ff'
+	printf %b '\e]P7f8f8f2'    # redefine 'white'          as 'dracula-fg'
+	printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
+	clear
+fi

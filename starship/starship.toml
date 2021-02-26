@@ -15,10 +15,10 @@ scan_timeout = 10
 add_newline = false
 
 [character]
-#success_symbol = "[👉](gold)"
-success_symbol = "[❯❯❯](yellow)"
+#success_symbol = "[❯❯❯](yellow)"
+success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
-vicmd_symbol = "[vi ➜](bold green)"
+vicmd_symbol = "[vi ➜](bold cyan)"
 
 # show task completion time
 [cmd_duration]
@@ -26,11 +26,6 @@ min_time = 500
 
 [directory]
 truncation_length = 8
-
-# show username
-[username]
-disabled = false
-show_always = true
 
 # separate the prompt into two line
 [line_break]
@@ -71,13 +66,3 @@ discharging_symbol = "💀"
 [[battery.display]]
 threshold = 10
 style = "bold red"
-
-[jobs]
-symbol = "+ "
-threshold = 4
-
-[status]
-style = "bg:blue"
-symbol = "💣 "
-format = "[\\[$symbol$status\\]]($style) "
-disabled = false
