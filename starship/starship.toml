@@ -31,32 +31,32 @@ truncation_length = 8
 [line_break]
 disabled = false
 
-[git_status]
-conflicted = "🏳"
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
-untracked = "🤷"
-stashed = "📦"
-modified = "📝"
-staged.value = "++"
-staged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
-renamed = "👅"
-deleted = "🗑"
-
-[git_branch]
-symbol = "🌱 "
-#truncation_length = 4
-truncation_symbol = ""
-
-[git_commit]
-commit_hash_length = 4
-
-[git_state]
-format = "[\\($state( $progress_current of $progress_total)\\)]($style) "
-cherry_pick = "[🍒 PICKING](bold red)"
+#[git_status]
+#conflicted = "🏳"
+#ahead = "⇡${count}"
+#diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+#behind = "⇣${count}"
+#untracked = "🤷"
+#stashed = "📦"
+#modified = "📝"
+#staged.value = "++"
+#staged.style = "green"
+#staged_count.enabled = true
+#staged_count.style = "green"
+#renamed = "👅"
+#deleted = "🗑"
+#
+#[git_branch]
+#symbol = "🌱 "
+##truncation_length = 4
+#truncation_symbol = ""
+#
+#[git_commit]
+#commit_hash_length = 4
+#
+#[git_state]
+#format = "[\\($state( $progress_current of $progress_total)\\)]($style) "
+#cherry_pick = "[🍒 PICKING](bold red)"
 
 [battery]
 full_symbol = "🔋"
