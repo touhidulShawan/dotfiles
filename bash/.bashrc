@@ -32,13 +32,12 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# alias for my lsd command replace for ls
-
- alias ls='lsd -hA --group-dirs first'
- alias l='ls -l'
- alias la='ls -a'
- alias lla='ls -la'
- alias lt='ls --tree'
+# alias for my exa command replace for ls
+alias la='exa -al --icons --sort=name --color=always --group-directories-first'
+alias ls='exa -a --icons --sort=name --group-directories-first'
+alias ll='exa -l --icons --color=always --group-directories-first'
+alias lt='exa -aT --icons --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
 
 # [bat as MANPAGER]
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -69,7 +68,7 @@ alias search='sudo pacman -Ss'
 # alias to uninstall packages
 alias uninstall='sudo pacman -Rns'
 alias unlock="sudo rm /var/lib/pacman/db.lck"    # remove pacman lock
-# alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 # update mirrorlist using reflector
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
@@ -79,6 +78,9 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
+
+# Random color script
+colorscript random
 
 #dracula theme for tty
 if [ "$TERM" = "linux" ]; then
@@ -102,3 +104,4 @@ if [ "$TERM" = "linux" ]; then
 	printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
 	clear
 fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
